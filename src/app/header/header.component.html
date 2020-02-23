@@ -9,7 +9,12 @@
       <i class="ion-search"></i>
     </button>
     {{ count }}
-    <span *ngIf="keyword === ''" class="highlight">請輸入關鍵字</span>
-    <span *ngIf="keyword !== ''" >你輸入的是: {{ keyword }}</span>
+    <!--
+      <span *ngIf="keyword === ''" class="highlight">請輸入關鍵字</span>
+      <span *ngIf="keyword !== ''" >你輸入的是: {{ keyword }}</span>
+    -->
+    <span *ngIf="keyword === ''; else yourInput" class="highlight">請輸入關鍵字</span>
+    <ng-template #yourInput> 你輸入的是: {{ keyword }} </ng-template>
+
   </div>
 </nav>
