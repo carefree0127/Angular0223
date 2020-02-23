@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   count = 0;
   keyword = 'test';
+  isHighlight = false;
+  fontSize = 24;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +18,8 @@ export class HeaderComponent implements OnInit {
 
   search() {
     this.count += 1;
+    this.isHighlight = !this.isHighlight;
+    this.fontSize += 2;
     console.log(this.keyword);
   }
 
