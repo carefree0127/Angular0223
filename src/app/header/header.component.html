@@ -10,5 +10,6 @@
     </button>
     {{ count }}
     <span *ngIf="keyword === ''" class="highlight">請輸入關鍵字</span>
+    <span *ngIf="keyword !== ''" >你輸入的是: {{ keyword }}</span>
   </div>
 </nav>
